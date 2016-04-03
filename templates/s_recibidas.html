@@ -1,0 +1,30 @@
+<ion-view view-title="Solicitudes Recibidos">
+<link rel="stylesheet" type="text/css" href="css/line.css" cache-view="false">
+<ion-content>
+
+   <ion-refresher on-refresh="doRefresh()" pulling-icon="ion-load-d" spinner="ios-small"></ion-refresher>
+
+    <div class="list list-inset" >
+        <label class="item item-input">
+         <i class="icon ion-search placeholder-icon"></i>
+         <input type="text" placeholder="Buscar" ng-model="busqueda">
+       </label>
+      </div>
+
+      <ul class="timeline">
+
+        <li ng-repeat="solicitud in reci | filter: busqueda">
+          <img src="{{ solicitud.img_usuario }}" alt="" class="timeline-thumb">
+          <div class="timeline-item">
+            <h4>{{ solicitud.nombre_usuario }}</h4>
+
+            <div class="timeline-stats">
+              <button class="button button-clear button-balanced" ng-click="(Asolicitud({{ solicitud.id }}))"><i class="ion-ios-checkmark-outline"></i> Aceptar </button>
+              <span class="pos-absolute-right">  <button class="button button-clear button-assertive" ng-click="(Dsolicitud({{ solicitud.id }}))"> <i class="ion-ios-close-outline"></i> Denegar </button></span>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+</ion-content>
+</ion-view>
