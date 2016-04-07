@@ -1,37 +1,10 @@
 <ion-view view-title="{{vm.info.title || 'Radio En linea'}}">
-
-<style type="text/css">
-	
-		#playcontrols {
-			text-align: center;
-			margin-top: 50px;
-		}
-		#playcontrols #activityindicator, #playcontrols #stopbutton {
-			display: none;
-		}
-		
-		#textpositiondiv {
-			margin-top: 100px;
-		}
-	
-	</style>
-
-		<div id="playcontrols">
-		  <a href="#" id="playbutton" onClick="html5audio.play();return false;"><img src="images/playbutton.png" /></a>
-		  <a href="#" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif" /></a>
-		  <a href="#" id="stopbuttn" onClick="html5audio.stop();return false;"><img src="images/stopbutton.png" /></a>
-	  </div>
-	  <div id="textpositiondiv">Time played: <span id="textposition">stopped</span></div>
-	  <script type="text/javascript">
-		  playButton = document.getElementById('playbutton');
-		  stopButton = document.getElementById('stopbutton');
-		  activityIndicator = document.getElementById('activityindicator');
-		  textPosition = document.getElementById('textposition');
-	  </script>
-
+<!--
+	<ion-content>
+ <iframe src="http://radio.sigtics.org/emisora">
+       <p>Your browser does not support iframes.</p>
+</iframe>
 </ion-content>
-
-	
-
+-->
 
 </ion-view>

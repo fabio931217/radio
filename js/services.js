@@ -441,7 +441,7 @@ $http.get('php/cargar_chat.php?usuario='+usuario).
       store: 'https://rollingstones.shop.bravadousa.com/store/',
       iTunesURI: 'https://itunes.apple.com/us/artist/the-rolling-stones/id1249595',
       // Live Radio
-      audioStream: 'http://69.64.58.8:8005/',
+      audioStream: 'http://69.64.58.8:8003/;stream.mp3',
       hasAudioStreamMeta: true,
       // audioStream: 'http://stream-dc1.radioparadise.com/mp3-128',
       // hasAudioStreamMeta: false,
@@ -648,7 +648,7 @@ return {
   /* @ngInject */
   
    var streamUrl = appSettings.getSettings().audioStream;
-  var metadataUrl = streamUrl + '7.html';
+  var metadataUrl = streamUrl;
   console.log(metadataUrl);
     var contentRegex = /<body>(.*)<\/body>/;
     var itunesSearchUrl = 'https://itunes.apple.com/search?term=';
