@@ -1250,19 +1250,23 @@ $ionicHistory.nextViewOptions({
             /* Check whether the HTTP Request is Successfull or not. */
             request.success(function (data) {
 
-         
+         console.log(data);
 
-              if(data == 1)
+              if(data.entro == 1)
               {
 
                 localStorage.setItem("usuario", $email);
                 localStorage.setItem("prueba", 0);
                  $templateCache.removeAll();
-
                  $ionicHistory.nextViewOptions({
-    disableBack: true
-  });
+                disableBack: true
+              });
+              
+              localStorage.setItem("nombre_user", data.name);
+              localStorage.setItem("imagen_user", data.foto);
 
+              document.getElementById("nombre_usuario").innerHTML =localStorage.getItem("nombre_user");
+              document.getElementById("img_usuario").src = localStorage.getItem("imagen_user");
 
                 $state.go('inicio');
               }
@@ -1743,96 +1747,9 @@ var request = $http({
 
 })
  
-.controller('StreamController' ,function ($scope, $ionicPlatform, $cordovaMedia){
-
-
- var src = "http://69.64.58.8:8005/;stream.mp3";
-  var media = $cordovaMedia.newMedia(src);
-
-
-  var iOSPlayOptions = {
-    numberOfLoops: 2,
-    playAudioWhenScreenIsLocked : false
-  }
-
-  media.play(iOSPlayOptions); // iOS only!
-  media.play(); // Android
-/*
-  var isPlaying = false;
-  var stream;
-  var timer;
-
-
-   var audioStream = appSettings.getSettings().audioStream;
-    var hasAudioStreamMeta = appSettings.getSettings().hasAudioStreamMeta;
-    var vm = angular.extend(this, {
-      togglePlay: togglePlay,
-      isPlaying: isPlaying,
-      info: null
-    });
-
-    // ********************************************************************
-
-    function togglePlay() {
-      if (vm.isPlaying) {
-        pause();
-      } else {
-        play();
-      }
-
-      vm.isPlaying = isPlaying = !isPlaying;
-    }
-
-    function play() {
-      if (window.Stream) {
-        stream = new window.Stream(audioStream);
-        // Play audio
-        stream.play();
-      }
-
-      getStreamInfo();
-      timer = $interval(function() {
-        getStreamInfo();
-      }, 5000);
-    }
-
-    function pause() {
-      vm.info = null;
-      $interval.cancel(timer);
-
-      if (!stream) {
-        return;
-      }
-
-      stream.stop();
-    }
-
-    function getStreamInfo() {
-      streamService.getStreamInfo().then(function(info) {
-        vm.info = info;
-      }, function() {
-        vm.info = null;
-      });
-    }
+.controller('StreamController' ,function ($interval, appSettings, streamService){
+    
   
-
-  var thisMedia;
-
-    $ionicPlatform.ready(function () {
-      thisMedia = new $cordovaMedia('http://69.64.58.8:8005/;stream.mp3');
-    });
-
-
-    $scope.playMedia = function () {
-      thisMedia.play();
-      console.log("play media");
-    };
-
-    $scope.stopMedia = function () {
-      thisMedia.pause();
-    };
-  
-*/
 
 })
 
@@ -2069,6 +1986,8 @@ var s = 1;
 .controller('inicioC', function($scope,$http,$state,$ionicPopup){
 
 
+document.getElementById("nombre_usuario").innerHTML =localStorage.getItem("nombre_user");
+document.getElementById("img_usuario").src = localStorage.getItem("imagen_user");
 
   $http.get('http://radio.sigtics.org/movil_funciones/aceptar').
       then(function(response) {
