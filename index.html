@@ -58,6 +58,112 @@
     <script src="js/eventos.js"></script> 
     <script src="js/cordova.js"></script>
 
+        <script type="text/javascript">
+        
+var playButton;
+var stopButton;
+var activityIndicator;
+var textPosition;
+
+function onError(error) 
+{
+  console.log(error.message);
+}
+
+function onConfirmRetry(button) {
+  if (button == 1) {
+    html5audio.play();
+  }
+}
+
+function pad2(number) {
+  return (number < 10 ? '0' : '') + number
+}
+
+var myaudioURL = 'http://69.64.58.8:8003/;stream.mp3';
+var myaudio = new Audio(myaudioURL);
+var isPlaying = false;
+var readyStateInterval = null;
+
+var html5audio = {
+  play: function()
+  {
+    isPlaying = true;
+    myaudio.play();
+  
+    readyStateInterval = setInterval(function(){
+       if (myaudio.readyState <= 2) {
+         //playButton.style.display = 'none';
+         //activityIndicator.style.display = 'block';
+         //textPosition.innerHTML = 'loading...';
+       }
+    },1000);
+    myaudio.addEventListener("timeupdate", function() {
+       var s = parseInt(myaudio.currentTime % 60);
+       var m = parseInt((myaudio.currentTime / 60) % 60);
+       var h = parseInt(((myaudio.currentTime / 60) / 60) % 60);
+       if (isPlaying && myaudio.currentTime > 0) {
+         //textPosition.innerHTML = pad2(h) + ':' + pad2(m) + ':' + pad2(s);
+       }
+    }, false);
+    myaudio.addEventListener("error", function() {
+       console.log('myaudio ERROR');
+    }, false);
+    myaudio.addEventListener("canplay", function() {
+       console.log('myaudio CAN PLAY');
+    }, false);
+    myaudio.addEventListener("waiting", function() {
+       //console.log('myaudio WAITING');
+       isPlaying = false;
+      // playButton.style.display = 'none';
+       //stopButton.style.display = 'none';
+       //activityIndicator.style.display = 'block';
+    }, false);
+    myaudio.addEventListener("playing", function() {
+       isPlaying = true;
+       //playButton.style.display = 'none';
+       //activityIndicator.style.display = 'none';
+       //stopButton.style.display = 'block';
+    }, false);
+    myaudio.addEventListener("ended", function() {
+       //console.log('myaudio ENDED');
+       html5audio.stop();
+       // navigator.notification.alert('Streaming failed. Possibly due to a network error.', null, 'Stream error', 'OK');
+       // navigator.notification.confirm(
+       // 'Streaming failed. Possibly due to a network error.', // message
+       // onConfirmRetry, // callback to invoke with index of button pressed
+       // 'Stream error', // title
+       // 'Retry,OK'    // buttonLabels
+       // );
+       if (window.confirm('Streaming failed. Possibly due to a network error. Retry?')) {
+        onConfirmRetry();
+       }
+    }, false);
+  },
+  pause: function() {
+    isPlaying = false;
+    clearInterval(readyStateInterval);
+    myaudio.pause();
+    //stopButton.style.display = 'none';
+    //activityIndicator.style.display = 'none';
+    //playButton.style.display = 'block';
+  },
+  stop: function() {
+    isPlaying = false;
+    clearInterval(readyStateInterval);
+    myaudio.pause();
+    //stopButton.style.display = 'none';
+    //activityIndicator.style.display = 'none';
+    //playButton.style.display = 'block';
+    myaudio = null;
+    myaudio = new Audio(myaudioURL);
+    //textPosition.innerHTML = '';
+  }
+};
+
+
+</script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body ng-app="starter" >
@@ -89,43 +195,40 @@
         <!-- Main view content -->
         <ion-nav-view animation="slide-left-right"></ion-nav-view>
       </ion-side-menu-content>
-        <iframe src="http://radio.sigtics.org/emisora">
-       <p>Your browser does not support iframes.</p>
-</iframe>
+
       <!-- Left menu -->
       <ion-side-menu side="left" >
 
         <ion-content>
-             
 
   
-
-
-
           <div class="text-center" ng-controller = 'HomeCtrl' >
 
             <a ui-sref="user">
-              <img class="profile-picture" menu-close="" src="{{ pru.img }}" id="img_usuario">
-              <h4 id="nombre_usuario">{{ pru.nombre }}</h4>
+              <img class="profile-picture" menu-close="" src="" id="img_usuario">
+              <h4 id="nombre_usuario"></h4>
             </a>
 
           </div>
-
+                  
+           <iframe src="http://www.marioenturadio.com/audioenvivo/salsa/index.html" style="height:200px">
+       <p>Your browser does not support iframes.</p>
+      </iframe>
         
 
           <div class="list" menu-close="">
             <div class="item item-icon-left" ui-sref="inicio">
               <i class="icon ion-ios-home-outline" style="color:#3ec3d6"></i>
               Inicio
-            </div>
+          </div>
 
-          <div class="list" menu-close="">
+
             <div class="item item-icon-left" ui-sref="home">
               <i class="icon ion-ios-information-outline"  style="color:#3ec3d6"></i>
               Noticias
             </div>
 
-            <div class="list" menu-close="">
+
             <div class="item item-icon-left" ui-sref="stream">
               <i class="icon ion-radio-waves" style="color:#3ec3d6"></i>
               Emisora
