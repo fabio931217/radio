@@ -1,22 +1,29 @@
-<ion-view view-title="{{vm.info.title || 'Radio En linea'}}">
+<ion-view view-title="{{vm.info.title || 'Radio en linea'}}">
+<ion-content class="center" style="
+		background: url({{vm.info.coverUrl || 'img/image_radio.png'}}) center center;
+		background-size: cover;">
+		<center>
+		<!--	<a class="button button-icon icon play-button-icon {{ vm.isPlaying ? 'ion-ios-pause' : 'ion-ios-play' }}"
+			ng-click="vm.togglePlay()"></a>
+		</center>
 
-<ion-content class="center" style="">
+		<audio  autoplay="autoplay"><source src=" http://69.64.58.8:8005/;stream.mp3" type="audio/mp3">Your browser does not support the audio element.</audio> -->
 
-	<h2>Emisora</h2>
-  	  <div id="playcontrols">
-		  <a href="#" id="playbutton" onClick="html5audio.play();return false;"><img src="images/playbutton.png" /></a>
-		  <a href="#" id="activityindicator" onClick="html5audio.stop();return false;"><img src="images/activityindicator.gif" /></a>
-		  <a href="#" id="stopbutton" onClick="html5audio.stop();return false;"><img src="images/stopbutton.png" /></a>
-	  </div>
-	  <div id="textpositiondiv">Time played: <span id="textposition">stopped</span></div>
-	  <script type="text/javascript">
-		  playButton = document.getElementById('playbutton');
-		  stopButton = document.getElementById('stopbutton');
-		  activityIndicator = document.getElementById('activityindicator');
-		  textPosition = document.getElementById('textposition');
-	  </script>
 
-	 
+		<button class="button" ng-click="Play('http://69.64.58.8:8005/;stream.mp3')">Reproducir 1</button>
+		<button class="button" ng-click="Play('mp3/imaginate.mp3')">Reproducir 2 Fijo</button>
+		<button class="button" ng-click="Play('http://radio.sigtics.org/emisora')">Reproducir 3</button>
+		<button class="button" ng-click="Play('mp3/listen.pls')">Reproducir 4</button>
+		<button class="button" ng-click="Play('http://stream.4zzzfm.org.au:789/;')">Emisora prueba 5</button>
+		<button class="button" ng-click="Play('http://69.64.58.8:8005/;')">Reproducir 6</button>
+		<button class="button" ng-click="Play('http://69.64.58.8:8005/;stream')">Reproducir 8</button>
+		<button class="button" ng-click="Play('http://69.64.58.8:8005/;stream.mpeg')">Reproducir 9</button>
+         
+                          
+           <iframe src="http://www.marioenturadio.com/audioenvivo/salsa/index.html" style="height:200px;width:90%">
+       <p>Your browser does not support iframes.</p>
+      </iframe
+
 	</ion-content>
 	
 

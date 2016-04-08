@@ -1060,6 +1060,7 @@ $scope.viewChat1 = function(ID_cont) {
       $estado = document.getElementById("estado_u").value;
       console.log($nombre);
       console.log($estado);
+      localStorage.setItem("nombre_user", $nombre);
 
     var token = "io-gluk@fct%vusb";
     $email_ac = localStorage.getItem("usuario");
@@ -1157,7 +1158,8 @@ $ionicHistory.nextViewOptions({
         }
       }).then(function(response) {
         // file is uploaded successfully
-           
+        localStorage.setItem("imagen_user", response.data.img);
+
        $timeout(function() {
          $state.go('user');
           $scope.uploadResult.push(response.data);
@@ -1747,64 +1749,15 @@ var request = $http({
 
 })
  
-.controller('StreamController' ,function ($interval, appSettings, streamService){
+.controller('StreamController' ,function($scope,$http){
   
-  var isPlaying = false;
-  var stream;
-  var timer;
-  
-  var audioStream = appSettings.getSettings().audioStream;
-    var hasAudioStreamMeta = appSettings.getSettings().hasAudioStreamMeta;
-    var vm = angular.extend(this, {
-      togglePlay: togglePlay,
-      isPlaying: isPlaying,
-      info: null
-    });
-
-    // ********************************************************************
-
-    function togglePlay() {
-      if (vm.isPlaying) {
-        pause();
-      } else {
-        play();
-      }
-
-      vm.isPlaying = isPlaying = !isPlaying;
+$scope.Play = function(src) {
+        var audio = {};
+        audio["walk"] = new Audio();
+        audio["walk"].src = src;
+        audio["walk"].play();
+       console.log(audio);
     }
-
-    function play() {
-      if (window.Stream) {
-        stream = new window.Stream(audioStream);
-        // Play audio
-        stream.play();
-      }
-
-      getStreamInfo();
-      timer = $interval(function() {
-        getStreamInfo();
-      }, 5000);
-    }
-
-    function pause() {
-      vm.info = null;
-      $interval.cancel(timer);
-
-      if (!stream) {
-        return;
-      }
-
-      stream.stop();
-    }
-
-    function getStreamInfo() {
-      streamService.getStreamInfo().then(function(info) {
-        vm.info = info;
-      }, function() {
-        vm.info = null;
-      });
-    }
-
 })
 
   
