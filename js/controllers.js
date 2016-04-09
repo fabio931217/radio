@@ -1749,7 +1749,7 @@ var request = $http({
 
 })
  
-.controller('StreamController' ,function($scope,$http){
+.controller('StreamController' ,function($scope,$http,ngAudio){
   
 $scope.Play = function(src) {
         var audio = {};
@@ -1758,7 +1758,28 @@ $scope.Play = function(src) {
         audio["walk"].play();
        console.log(audio);
     }
+$scope.songs = [
+            {
+                id: 'one',
+                title: 'Rain',
+                artist: 'Drake',
+                url: 'http://www.schillmania.com/projects/soundmanager2/demo/_mp3/rain.mp3'
+            },
+        ];
+
+var a = document.createElement('audio');
+var aacSupport = a.canPlayType('audio/mp4; codecs="mp4a.40.2"');
+console.log(aacSupport);
+
+    /*
+    $scope.audio = ngAudio.load("http://198.100.125.242/;"); // returns NgAudioObject
+    console.log($scope.audio);
+    $scope.audio.play();
+
+*/
+
 })
+
 
   
 
