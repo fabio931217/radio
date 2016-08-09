@@ -1598,11 +1598,29 @@ var request = $http({
 .controller('agregarCtr', function($scope,$http,alertify) {
 
   $scope.closemodal_usuario();
+ $cont = localStorage.getItem("usuario");
+ $scope.Listusu = function (){
 
-  $scope.Ausuario = function () {
+
+
+    $http.get('http://adminenri.sigtics.org/movil_funciones/listarUsuarioC?user='+$cont).
+           then(function successCallback(response) {
+              // $scope.$apply(function() {
+                  $scope.con = response.data;
+             
+             console.log(response.data);
+          
+     })
+
+ }
+
+ $scope.Listusu();
+
+
+  $scope.Ausuario = function (user) {
 
     var token = "io-gluk@fct%vusb";
-    var usuario = document.getElementById("usuarioA").value;
+    var usuario = user;
     $email_con = localStorage.getItem("usuario");
 
     //var tipoU = document.getElementById("tipoU").value;
@@ -1636,7 +1654,7 @@ var request = $http({
 
               alertify.logPosition("top right");
               alertify.success(data.msg);
-              document.getElementById("usuarioA").value = "";
+               $scope.Listusu();
     
              
 
@@ -1648,6 +1666,8 @@ var request = $http({
              
             }); 
     }
+
+
 
 })
 
