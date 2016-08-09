@@ -1,0 +1,34 @@
+<ion-view>
+
+
+  <ion-content style="{{not_error[0].img}}">
+    <ion-list>
+     <a href="" class="people_list"
+       collection-repeat="item in posts"
+       collection-item-width="'100%'"
+       collection-item-height="85"
+       ng-click="viewPost(item.id_noticia)"> 
+      
+      <div class="row">
+        <div class="col col-25">
+          <div class="img_status">
+            <div class="photo_person" style="background:url({{item.img_noticia}})no-repeat; background-size:100% 100%;"></div>
+           </div> 
+        </div>
+          <div class="col">
+          <h3>{{item.titulo}}</h3>
+          <p class="type_msg"><span ng-class="{'del_margin':!item.type}">{{item.descripcionC}}</span></p>
+          <p>{{item.fechar}}</p>
+          <span class="notificate" ng-show="item.number==true">3</apan>
+        </div>
+      </div>
+    </a>
+    
+    </ion-list>
+
+    <button  class="button" ng-if="not_error[0].text" ng-click="notici()" style="    margin-top: 270px;
+    margin-left: 130px;"> <i class="icon ion-refresh"></i> Actualizar </button>
+
+    </br></br></br>
+  </ion-content>
+</ion-view>

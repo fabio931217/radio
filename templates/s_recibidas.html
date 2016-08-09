@@ -1,8 +1,22 @@
-<ion-view view-title="Solicitudes Recibidos">
-<link rel="stylesheet" type="text/css" href="css/line.css" cache-view="false">
-<ion-content>
+<ion-view >
+<link rel="stylesheet" type="text/css" href="css/line.css" >
+<ion-nav-bar class="bar-stable">
+        
+        <ion-nav-buttons side="right" >
+            
+              <a class="button button-icon button-clear back_btn" ng-click="myGoBack()" style="padding-top: 15px;">
+                <i class="ion-chevron-left"></i>
+            </a>
+        </ion-nav-buttons>
+         <ion-nav-buttons side="left" >
+            <button class="button button-icon button-clear logo_img">
+              <img class="title-image" src="img/title.png" />
+            </button>
+        </ion-nav-buttons>
+</ion-nav-bar>
+<ion-content style="top: 50px;">
 
-   <ion-refresher on-refresh="doRefresh()" pulling-icon="ion-load-d" spinner="ios-small"></ion-refresher>
+ 
 
     <div class="list list-inset" >
         <label class="item item-input">
@@ -11,20 +25,33 @@
        </label>
       </div>
 
-      <ul class="timeline">
 
-        <li ng-repeat="solicitud in reci | filter: busqueda">
-          <img src="{{ solicitud.img_usuario }}" alt="" class="timeline-thumb">
-          <div class="timeline-item">
-            <h4>{{ solicitud.nombre_usuario }}</h4>
+<ion-list>
+     <a href="" class="people_list"
+       collection-repeat="solicitud in reci | filter: busqueda"
+       collection-item-width="'100%'"
+       collection-item-height="85"> 
+      
+      <div class="row">
+        <div class="col col-25">
+          <div class="img_status">
+            <div class="photo_person" style="background:url({{solicitud.img_usuario}})no-repeat; background-size:100% 100%;"></div>
+            
+          </div>  
+        </div>
+          <div class="col">
+          <h3>{{ solicitud.nombre_usuario }}</h3>
 
-            <div class="timeline-stats">
-              <button class="button button-clear button-balanced" ng-click="(Asolicitud({{ solicitud.id }}))"><i class="ion-ios-checkmark-outline"></i> Aceptar </button>
-              <span class="pos-absolute-right">  <button class="button button-clear button-assertive" ng-click="(Dsolicitud({{ solicitud.id }}))"> <i class="ion-ios-close-outline"></i> Denegar </button></span>
+          <div class="timeline-stats">
+              <button class="button button-clear button-balanced" ng-click="Asolicitud(solicitud.id)"><i class="ion-ios-checkmark-outline"></i> Aceptar </button>
+              <span class="pos-absolute-right">  <button class="button button-clear button-assertive" ng-click="Dsolicitud(solicitud.id)"> <i class="ion-ios-close-outline"></i> Denegar </button></span>
             </div>
-          </div>
-        </li>
+          
+        </div>
+      </div>
+    </a>
+    </ion-list>
 
-      </ul>
+
 </ion-content>
 </ion-view>

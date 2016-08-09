@@ -1,0 +1,39 @@
+<ion-view>
+
+<ion-nav-bar class="bar-stable">
+        
+        <ion-nav-buttons side="right" >
+            
+              <a class="button button-icon button-clear back_btn" ng-click="myGoBack()" style="padding-top: 15px;">
+                <i class="ion-chevron-left"></i>
+            </a>
+        </ion-nav-buttons>
+         <ion-nav-buttons side="left" >
+            <button class="button button-icon button-clear logo_img">
+              <img class="title-image" src="img/title.png" />
+            </button>
+        </ion-nav-buttons>
+        
+</ion-nav-bar>
+
+  <ion-content class="setting_page padding ">
+  <br><br><br><br>
+    <div class="profil_img" >
+       <img class="cir_img"  ng-click="ftoChat1(perilUser.img)" src="{{perilUser.img}}"/>
+    </div>
+    <div class="content" style="width:100%">
+        <h3><i class="ion-person"></i>{{perilUser.nombre}}</h3>
+
+        <br>
+
+        <h3><i class="ion-chatbox-working"></i>{{perilUser.mensaje_personal}}</h3>
+        
+        <br>
+
+        <h3><i class="ion-email"></i>{{perilUser.email}}</h3>
+  
+        
+        
+   </div>
+  </ion-content>
+  </ion-view>

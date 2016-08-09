@@ -1,0 +1,40 @@
+<ion-view>
+
+   
+  <ion-content style="{{cont_error[0].img}}">
+    <ion-list>
+
+
+
+    <div class="list list-inset"  >
+        <label class="item item-input">
+         <i class="icon ion-search placeholder-icon"></i>
+         <input type="text" placeholder="Buscar" ng-model="busqueda">
+       </label>
+    </div>
+    
+  <ion-list>
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right " ng-repeat="item in contacts | filter: busqueda | orderBy: 'chat.fecha' " type="item-text-wrap"
+                ng-click="viewChat1(item.id)">
+        <img ng-src="{{item.face}}">
+        
+        <h2>{{item.name}}</h2>
+        <p>{{item.group}}</p>
+ 
+       <span class="status" style="background:{{item.color}};"></span>
+          <ion-option-button class="button-assertive ion-android-delete" ng-click="eliminar_contac({{ item.id_relacion }})">
+          </ion-option-button>
+      </ion-item>
+    </ion-list>
+          
+    </ion-list>
+
+    <button  class="button" ng-if="cont_error[0].text" ng-click="ccon()" style="    margin-top: 270px;
+    margin-left: 130px;"> <i class="icon ion-refresh"></i> Actualizar </button>
+
+    <br><br><br>
+  </ion-content>
+
+  
+</ion-view>

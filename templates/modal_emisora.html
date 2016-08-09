@@ -1,0 +1,64 @@
+<ion-modal-view class="search animated slideInDown ">
+    <ion-content class="ser_input">
+
+    <style>
+      .speaker {
+  width:48px;
+  height:48px;
+  float: left;
+  background-image: url(http://www.stillonthehill.com/images/Play-grey.png);
+}
+.speaker.pause {
+  background-image: url(http://www.iconhot.com/icon/png/addictive-flavour/48/button-red-pause.png);    
+}
+    </style>
+
+    <!--
+
+    <div class="list" ng-repeat="song in songs">
+
+    <a class="item item-thumbnail-left" href="#"  music-player="play" add-song="song" ng-model="play" ng-click="play1() " data-ng-if="song.play = 1" style="background: transparent;
+    border: none;">
+      <img src="{{ song.img }}">
+      <h2 style="padding-top:20px;color:#ccc">{{ song.title }}</h2>
+      <p style="width:100%">Clic y espera un momento...</p>
+
+    </a>
+  </div>
+<center>			
+  <button stop-music class="button icon-left ion-stop button-clear  button-outline button-assertive" ng-model="pause" ng-click="play1()" data-ng-if="song.play = 2" style="border-color: #387ef5;
+    background: transparent;
+    color: #387ef5;
+    width: 100%;">Detener</button></center>
+    	-->
+
+
+<div class="list card" ng-repeat="song in songs">
+      <div class="item item-avatar">
+        <img src="{{ song.img }}">
+        <h2>{{ song.title }}</h2>
+        <p>Clic y espera un momento...</p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left" style="top: 0px !important;">
+        <a music-player="play" add-song="song" ng-model="play" ng-click="play1() " data-ng-if="song.play = 1" style="background: transparent;
+    border: none;">
+          <i class="icon ion-ios-play"></i>
+          Play
+        </a>
+
+        <a class="tab-item" href="#" ng-model="pause" stop-music ng-click="play1()" data-ng-if="song.play = 2" >
+          <i class="icon ion-android-checkbox-blank"></i>
+          Stop
+        </a>
+       
+      </div>
+</div>
+
+
+
+
+    </ion-content>
+  </ion-modal-view>
+
+

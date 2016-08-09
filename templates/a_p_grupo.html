@@ -1,5 +1,20 @@
 <link rel="stylesheet" type="text/css" href="css/inicio.css"> 
-  <ion-view view-title="Agregar Usuarios Al Grupo" cache-view="false">
+  <ion-view >
+
+  <ion-nav-bar class="bar-stable">
+        
+        <ion-nav-buttons side="right" >
+            
+              <a class="button button-icon button-clear back_btn" ng-click="myGoBack()" style="padding-top: 15px;">
+                <i class="ion-chevron-left"></i>
+            </a>
+        </ion-nav-buttons>
+         <ion-nav-buttons side="left" >
+            <button class="button button-icon button-clear logo_img">
+              <img class="title-image" src="img/title.png" />
+            </button>
+        </ion-nav-buttons>
+</ion-nav-bar>
 
     <ion-content>
 
@@ -23,7 +38,7 @@ min-height: 72px;
 </style>
 
 <ion-item class="item-avatar item-icon-right" ng-repeat=" contact in contacts " style="
-padding-left: 0px;
+padding-left: 80px;
 padding-right: 0px;
 padding-bottom: 0px;
 padding-top: 0px;
@@ -31,10 +46,10 @@ height: 52px;" >
 
   
 
- <ion-checkbox ng-change="crearGrupo( {{ contact.id }})" ng-model="activo" id="{{ contact.id }}">
+ <ion-checkbox ng-change="crearGrupo(contact.id)" ng-model="activo" id="contact.id">
            <img class="profile-picture" src="{{ contact.face }}" alt=""/>
           <p>
-            <a href="#" class="post-author">
+            <a href="#" class="post-author" style="text-decoration: none;color:#000">
               {{ contact.name }}
             </a>
             <span class="badge badge-positive" ng-if="contact.group == 'Family'">Familia</span>
@@ -46,13 +61,9 @@ height: 52px;" >
         </ion-item>
       </ion-list>
 
-
+<button ng-click="Agregar_mas()" class="button button-positive" style="width:100%;margin-top:5px">Guardar</button>
     </ion-content>
 
-<div class="contenedor" >
-<button class="botonF1" ng-click="Agregar_mas()" >
-<span><i class="ion-plus-circled"></i></span>
-</button>
-</div>
+
 
   </ion-view>

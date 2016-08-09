@@ -1,63 +1,37 @@
-<ion-view view-title="Login" hide-nav-bar="true"  cache-view="false">
-
-<style type="text/css">
-  .menu {
-width: 2px !important;
-background-color: #fff !important;
-display: none !important;
-}
-</style>
-
-  <ion-content class="padding" delegate-handle="mainScroll">
-    <!-- Logo -->
-      
-    <div class="padding text-center" style="padding-top:140px">
-      <img src="img/logo72_os.png" style="width:50%;height:50% ">
-    </div>
-
-    <!-- Login form -->
-    <div id="login" ng-app='angular_post' ng-controller='login'>
-    <div class="list list-inset transparent-form">
-      <label class="item item-input">
-        <i class="ion-ios-email-outline light icon-label"></i>
-        <input type="text" placeholder="Email o nombre de usuario" name='usuario_l' id='usuario_l' ng-model="usuario_l" >
-      </label>
-      <label class="item item-input">
-        <i class="ion-ios-locked-outline light icon-label"></i>
-        <input type="password" placeholder="Contraseña" name='clave_l' id='clave_l' ng-model="clave_l">
-      </label>
-    </div>
-    <div class="padding">
-      <button class="button button-block button-positive"  ng-click="login()">
-        Iniciar sesión
-      </button>
-    </div>
-    </div>
-
+<ion-view  hide-nav-bar="true">
+<ion-content class="login_page">
+  <div class="logo" style="margin-top: 60px;">
    
-     <div class="padding text-center">
-      <span class="light"></span>
-     
-    </div>
-
-    <!-- Other links -->
-    <div class="padding row" style="">
-
-      <div class="row" style="border:none" >
-
-     
-     <a href="#/restaurar" style="color:#000;border:none;width:100%;padding:0px"><i class="ion-locked"></i> ¿Olvidastes contraseña?</a> 
-   
-      
-    
-      <a href="#/register" class="light" style="color:#000;border:none;width:100%;padding:0px"> <i class="ion-person-add"></i>Registrate  </a>  
-  
-      
-
+    <img class="txt" src="img/logotxt.png"/>
+  </div>
+  <form class="form_log padding">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-person"></i>
+        <input type="text" placeholder="Nombre de usuario" id="user">
+      </label>
+       <label class="item item-input">
+        <i class="icon ion-unlocked"></i>
+        <input type="password" placeholder="Contraseña" id="clave">
+      </label>
+      <div class="row">
+       <div class="col">
+            <a  ng-click="login()" class="button button-block button-positive">
+            Iniciar sesión
+            </a>  
+       </div>
+        <div class="col col-33">
+            <a href="#/register" class="button button-block button-positive new_reg">
+            Registrarse
+            </a>  
+       </div>
       </div>
-    </div>
+   </div>
+   <button class="button button-clear">
+     Olvido su contraseña?
+   </button>
 
-
-      </div>
+  </form>
   </ion-content>
 </ion-view>
+

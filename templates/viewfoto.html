@@ -1,26 +1,50 @@
-<ion-view view-title="Foto de perfil" hide-nav-bar="true" cache-view="false">
-  <ion-content>
-<div class="bar bar-header" style="border:none;background-color:#387EF5;">
-<button class="button button-icon icon ion-ios-arrow-back" style="color:#fff" ui-sref="user">
-   Perfil
- </button>
-<div class="h1 title" style="color:#fff">Cambiar Fotos</div>
+<ion-view >
+
+<ion-nav-bar class="bar-stable">
+        
+        <ion-nav-buttons side="right" >
+            
+              <a class="button button-icon button-clear back_btn" ng-click="myGoBack()" style="padding-top: 15px;">
+                <i class="ion-chevron-left"></i>
+            </a>
+            <a class="button button-icon button-clear back_btn" ng-click="clickUpload()" style="padding-top: 15px;">
+                <i class="ion-edit"></i>
+            </a>
+        </ion-nav-buttons>
+         <ion-nav-buttons side="left" >
+            <button class="button button-icon button-clear logo_img">
+              <img class="title-image" src="img/title.png" />
+            </button>
+        </ion-nav-buttons>
+</ion-nav-bar>
+
+
+  <ion-content style="margin-top: -50px;">
+
+<!-- <div class="list" style="margin-bottom: 0px;">
+
+  <a class="item item-icon-left" href="#/tab/group">
+    <i class="icon ion-arrow-return-left"></i>
+    Configuracion
+  </a> -->
+
+
+<br/>
+<br/>
+<br/>
+<!--
 <button type="button" class="button button-icon icon ion-edit" style="color:#fff" ng-click="clickUpload()"> 
-  </button>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+  </button> -->
 
 <div style="position:relative">
 
 <div style="z-index:1;position:absolute;width:100%">
-<img src="{{ img }}" style="-webkit-filter:blur(5px);width:100%;">
+<img src="{{ img }}" style="-webkit-filter:blur(5px);width:100%;"  >
 </div>
+
+
+<br/>
+<br/>
 <!-- PRINCIPA -->
 
 <div style="z-index:2;position:absolute;width:100%;padding-top:20px">
@@ -28,6 +52,8 @@
 <form style="display:none">
 <div style="text-align: left;font-size: 20px;padding: 10px;color: #487eaa;">
 </div>
+<br/>
+<br/>
 <div class="file-upload">
   <br/>
   <input type="file" id="i_file" name="file" ng-file-select="onFileSelect($files)" accept="image/*"/>
@@ -40,6 +66,8 @@
 </center>
 </div>
 </div>
+
+<!-- <button ng-click="clickUpload()" class="button button-positive" style="top: -90px;">Cambiar foto</button> -->
 <style type="text/css">
 div.file-upload {
     width: 157px;
