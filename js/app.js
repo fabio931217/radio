@@ -20,14 +20,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','a
                 id: 'juv',
                 title: 'Mario En Tu Radio Juvenil',
                 artist: 'Mario',
-                url: 'http://5.199.169.190:8221/;stream.mp3',
+                url: 'http://69.64.58.8:8004/live',
                 play:'play',
                 img:'img/juvenil.png'
             },{
                 id: 'sal',
                 title: 'Mario En Tu Radio Salsa',
                 artist: 'Mario',
-                url: 'http://5.199.169.190:8036/;stream.mp3',
+                url: 'http://69.64.58.8:8003/live',
                 play:'play',
                 img:'img/salsa.png'
             }
