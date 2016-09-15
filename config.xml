@@ -59,20 +59,10 @@
 		<splash src="file://C:\xampp\htdocs\ENRIBETA_4\img\iconos\Android\holder\320-480.png" qualifier="" />
 		<splash src="file://C:\xampp\htdocs\ENRIBETA_4\img\iconos\Android\holder\320-480.png" qualifier="" />
 		<splash src="file://C:\xampp\htdocs\ENRIBETA_4\img\iconos\Android\holder\480-320.png" qualifier="" />
-		   <allow-intent href="market:*" />
 		</platform>
 		<platform name="winphone">
 		</platform>
 
-		<access origin="*"/>
-    <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
-    <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
-    <plugin name="cordova-plugin-whitelist" version="1" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+
 		 <icon src="icon.png" />
 		</widget>
