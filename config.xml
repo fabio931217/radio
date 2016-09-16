@@ -1,35 +1,17 @@
-		<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		xmlns:android = "http://schemas.android.com/apk/res/android"
 		id        = "www.EnriMessenger.sigtics.org"
-		versionCode="3.0"
+		versionCode= "3.0"
 		version   = "3.0">
-		<name>Enri		</name>
-		<description>Enri, Aplicacion oficial de mario en tu radio		</description>
-		<author href="http://sigtics.org/" email="sigtics@gmail.com">sigtics		</author>
-		<feature name="http://api.phonegap.com/1.0/battery" />
-		<feature name="http://api.phonegap.com/1.0/camera" />
-		<feature name="http://api.phonegap.com/1.0/contacts" />
-		<feature name="http://api.phonegap.com/1.0/file" />
-		<feature name="http://api.phonegap.com/1.0/geolocation" />
-		<feature name="http://api.phonegap.com/1.0/media" />
-		<feature name="http://api.phonegap.com/1.0/network" />
-		<feature name="http://api.phonegap.com/1.0/notification" />
-		<plugin name="cordova-plugin-camera"  />
-		<plugin name="cordova-plugin-contacts"  />
-		<plugin name="cordova-plugin-device-orientation"  />
-		<plugin name="cordova-plugin-dialogs"  />
-		<plugin name="cordova-plugin-geolocation"  />
-		<plugin name="cordova-plugin-globalization"  />
-		<plugin name="cordova-plugin-inappbrowser"  />
-		<plugin name="cordova-plugin-media"  />
-		<plugin name="cordova-plugin-media-capture"  />
-		<plugin name="cordova-plugin-network-information"  />
-		<plugin name="cordova-plugin-splashscreen"  />
-		<plugin name="cordova-plugin-vibration"  />
-		<preference name="phonegap-version" value="cli-6.3.0" />
-		<preference name="android-build-tool" value="gradle" />
+		<name>Enri</name>
+		<description>
+Enri, Aplicacion oficial de mario en tu radio		</description>
+		<author href="http://sigtics.org/" email="sigtics@gmail.com">
+sigtics
+		</author>
+
+		<preference name="phonegap-version" value="3.7.0" />
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="false" />
 		<preference name="target-device" value="universal" />
@@ -41,57 +23,72 @@
 		<preference name="exit-on-suspend" value="false" />
 		<preference name="show-splash-screen-spinner" value="true" />
 		<preference name="auto-hide-splash-screen" value="true" />
-		<preference name="FadeSplashScreen " value="true" />
 		<preference name="EnableViewportScale" value="true" />
 		<preference name="MediaPlaybackRequiresUserAction" value="false" />
 		<preference name="AllowInlineMediaPlayback" value="false" />
 		<preference name="BackupWebStorage" value="cloud" />
 		<preference name="TopActivityIndicator" value="gray" />
-		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
-		<preference name="KeyboardShrinksView " value="false" />
-		<preference name="HideKeyboardFormAccessoryBar" value="true" />
-		<preference name="SuppressesIncrementalRendering" value="true" />
-		<preference name="windows-identity-name" value="" />
+		<preference name="KeyboardDisplayRequiresUserAction" value="false" />
+		<preference name="HideKeyboardFormAccessoryBar" value="false" />
+		<preference name="SuppressesIncrementalRendering" value="false" />
 		<preference name="android-minSdkVersion" value="13" />
 		<preference name="android-installLocation" value="internalOnly" />
 		<preference name="SplashScreenDelay" value="8000" />
-		<preference name="ErrorUrl" value="" />
-		<preference name="BackgroundColor" value="0x000000" />
-		<preference name="DisallowOverscroll" value="false" />
-		<preference name="LoadingDialog" value="," />
+		<preference name="ErrorUrl" value=""/>
+		<preference name="BackgroundColor" value="0x000000"/>
+		<preference name="KeepRunning" value="true"/>
+		<preference name="DisallowOverscroll" value="false"/>
 		<preference name="LoadUrlTimeoutValue" value="20000" />
-		<platform name="ios">
-		<icon src=" img/iconos/ios/iconos/57-57.png" width="57" height="57" />
-		<icon src=" img/iconos/ios/iconos/144-144.png" width="144" height="144" />
-		<icon src=" img/iconos/ios/iconos/72-72.png" width="72" height="72" />
-		<icon src=" img/iconos/ios/iconos/114-114.png" width="114" height="114" />
-		<icon src=" img/iconos/ios/iconos/120-120.png" width="120" height="120" />
-		<icon src=" img/iconos/ios/iconos/76-76.png" width="76" height="76" />
-		<icon src=" img/iconos/ios/iconos/152-152.png" width="152" height="152" />
-		<splash src=" img/iconos/ios/holder/640-1136.png" width="640" height="1136" /> 
-		<splash src=" img/iconos/ios/holder/1136-640.png" width="1136" height="640" /> 
-		<splash src=" img/iconos/ios/holder/640-960.png" width="640" height="960" /> 
-		<splash src=" img/iconos/ios/holder/960-640.png" width="960" height="640" /> 
-		<splash src=" img/iconos/ios/holder/320-480.png" width="320" height="480" /> 
-		<splash src=" img/iconos/ios/holder/480-320.png" width="480" height="320" /> 
-		</platform>
-		<platform name="android">
-		<icon src=" img/iconos/Android/iconos/36-36.png" qualifier="ldpi" />
-		<icon src=" img/iconos/Android/iconos/48-48.png" qualifier="mdpi" />
-		<icon src=" img/iconos/Android/iconos/72-72.png" qualifier="hdpi" />
-		<icon src=" img/iconos/Android/iconos/96-96.png" qualifier="xhdpi" />
-		<icon src=" img/iconos/Android/iconos/144-144.png" qualifier="xxhdpi" />
-		<icon src=" img/iconos/Android/iconos/192-192.png" qualifier="xxxhdpi" />
-		<splash src=" img/iconos/Android/holder/240-400.png" qualifier="ldpi" />
-		<splash src=" img/iconos/Android/holder/320-480.png" qualifier="mdpi" />
-		<splash src=" img/iconos/Android/holder/480-800.png" qualifier="hdpi" />
-		<splash src=" img/iconos/Android/holder/720-960.png" qualifier="xhdpi" />
-		<splash src=" img/iconos/Android/holder/1080-1920.png" qualifier="xxhdpi" />
-		</platform>
-		<platform name="winphone">
-		<icon src=" img/iconos/windows/iconos/173-173.png" />
-		</platform>
-		 <icon src="icon.png" />
+		<preference name="disable-cursor" value="false" />
+		<gap:platform name="android" />
+		<feature name="http://api.phonegap.com/1.0/camera"/>
+		<feature name="http://api.phonegap.com/1.0/contacts"/>
+		<feature name="http://api.phonegap.com/1.0/file"/>
+		<feature name="http://api.phonegap.com/1.0/media"/>
+		<feature name="http://api.phonegap.com/1.0/notification"/>
+		<feature name="http://api.phonegap.com/1.0/network"/>
+		<gap:plugin name="org.apache.cordova.camera"  />
+		<gap:plugin name="org.apache.cordova.contacts"  />
+		<gap:plugin name="org.apache.cordova.device-orientation"  />
+		<gap:plugin name="org.apache.cordova.dialogs"  />
+
+		<gap:plugin name="org.apache.cordova.geolocation"  />
+		<gap:plugin name="org.apache.cordova.globalization"  />
+		<gap:plugin name="org.apache.cordova.inappbrowser"  />
+		<gap:plugin name="org.apache.cordova.media"  />
+		<gap:plugin name="org.apache.cordova.media-capture"  />
+		<gap:plugin name="org.apache.cordova.network-information"  />
+		<gap:plugin name="org.apache.cordova.splashscreen"  />
+		<gap:plugin name="org.apache.cordova.vibration"  />
+
+		<icon src="img/iconos/ios/iconos/57-57.png" gap:platform="ios" width="57" height="57" />
+		<icon src="img/iconos/ios/iconos/72-72.png" gap:platform="ios" width="72" height="72" />
+		<icon src="img/iconos/ios/iconos/114-114.png" gap:platform="ios" width="114" height="114" />
+		<icon src="img/iconos/ios/iconos/144-144.png" gap:platform="ios" width="144" height="144" />
+		<icon src="img/iconos/ios/iconos/76-76.png" gap:platform="ios" width="76" height="76" />
+		<icon src="img/iconos/ios/iconos/120-120.png" gap:platform="ios" width="120" height="120" />
+		<icon src="img/iconos/ios/iconos/152-152.png" gap:platform="ios" width="152" height="152" />
+		<icon src="img/iconos/Android/iconos/36-36.png" gap:platform="android" gap:density="ldpi" />
+		<icon src="img/iconos/Android/iconos/48-48.png" gap:platform="android" gap:density="mdpi" />
+		<icon src="img/iconos/Android/iconos/72-72.png" gap:platform="android" gap:density="hdpi" />
+		<icon src="img/iconos/Android/iconos/96-96.png" gap:platform="android" gap:density="xhdpi" />
+		<icon src="img/iconos/Android/iconos/144-144.png" gap:platform="android" gap:density="xxhdpi" />
+		<icon src="img/iconos/Android/iconos/192-192.png" gap:platform="android" gap:density="xxxhdpi" />
+		<icon src="img/iconos/windows/iconos/62-62.png" gap:platform="winphone" />
+		<icon src="img/iconos/windows/iconos/173-173.png" gap:platform="winphone" gap:role="background" />
+		<icon src="img/iconos/default/iconos/64-64.png" />
+		<gap:splash src="img/iconos/ios/holder/320-480.png" gap:platform="ios" width="320" height="480" />
+		<gap:splash src="img/iconos/ios/holder/480-320.png" gap:platform="ios" width="480" height="320" />
+		<gap:splash src="img/iconos/ios/holder/640-960.png" gap:platform="ios" width="640" height="960" />
+		<gap:splash src="img/iconos/ios/holder/960-640.png" gap:platform="ios" width="960" height="640" />
+		<gap:splash src="img/iconos/ios/holder/640-1136.png" gap:platform="ios" width="640" height="1136" />
+		<gap:splash src="img/iconos/ios/holder/1136-640.png" gap:platform="ios" width="1136" height="640" />
+		<gap:splash src="img/iconos/Android/holder/240-400.png" gap:platform="android" gap:density="ldpi" />
+		<gap:splash src="img/iconos/Android/holder/320-480.png" gap:platform="android" gap:density="mdpi" />
+		<gap:splash src="img/iconos/Android/holder/480-800.png" gap:platform="android" gap:density="hdpi" />
+		<gap:splash src="img/iconos/Android/holder/720-960.png" gap:platform="android" gap:density="xhdpi" />
+		<gap:splash src="img/iconos/Android/holder/1080-1920.png" gap:platform="android" gap:density="xxhdpi" />
+		<access origin="*" />
 		<allow-intent href="tel:*" />
 		<allow-intent href="mailto:*" />
-		</widget>
+	</widget>
