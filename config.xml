@@ -2,8 +2,8 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "www.EnriMessenger.sigtics.org"
-		versionCode= "3.0"
-		version   = "3.0">
+		versionCode= "12.0"
+		version   = "12.0">
 		<name>Enri</name>
 		<description>
 Enri, Aplicacion oficial de mario en tu radio		</description>
