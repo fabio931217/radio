@@ -2,8 +2,8 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "www.EnriMessenger.sigtics.org"
-		versionCode= "12.2.1"
-		version   = "12.2.1">
+		versionCode= "2.2.1"
+		version   = "2.2.1">
 		<name>Enri</name>
 		<description>
 Enri, Aplicacion oficial de mario en tu radio		</description>
@@ -11,7 +11,7 @@ Enri, Aplicacion oficial de mario en tu radio		</description>
 sigtics
 		</author>
 
-		<preference name="phonegap-version" value="clic-5.1.1" /> 
+		<preference name="phonegap-version" value="3.7.0" /> 
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="true" />
 		<preference name="target-device" value="universal" />
