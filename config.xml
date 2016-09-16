@@ -39,7 +39,7 @@ sigtics
 		<preference name="stay-in-webview" value="true" />
 		<preference name="ios-statusbarstyle" value="black-opaque" />
 		<preference name="detect-data-types" value="true" />
-		<preference name="exit-on-suspend" value="true" />
+		<preference name="exit-on-suspend" value="false" />
 		<preference name="show-splash-screen-spinner" value="true" />
 		<preference name="auto-hide-splash-screen" value="true" />
 		<preference name="FadeSplashScreen " value="true" />
@@ -62,34 +62,7 @@ sigtics
 		<preference name="DisallowOverscroll" value="false" />
 		<preference name="LoadingDialog" value="," />
 		<preference name="LoadUrlTimeoutValue" value="40000" />
-		<feature name="Device">
-		    <param name="ios-package" value="CDVDevice" />
-		</feature>
 
-
-
-		<icon src="img/iconos/ios/iconos/57-57.png" gap:platform="ios" width="57" height="57" />
-		<icon src="img/iconos/ios/iconos/72-72.png" gap:platform="ios" width="72" height="72" />
-		<icon src="img/iconos/ios/iconos/114-114.png" gap:platform="ios" width="114" height="114" />
-		<icon src="img/iconos/ios/iconos/144-144.png" gap:platform="ios" width="144" height="144" />
-		<icon src="img/iconos/ios/iconos/76-76.png" gap:platform="ios" width="76" height="76" />
-		<icon src="img/iconos/ios/iconos/120-120.png" gap:platform="ios" width="120" height="120" />
-		<icon src="img/iconos/ios/iconos/152-152.png" gap:platform="ios" width="152" height="152" />
-		<icon src="img/iconos/Android/iconos/36-36.png" gap:platform="android" gap:density="ldpi" />
-		<icon src="img/iconos/Android/iconos/48-48.png" gap:platform="android" gap:density="mdpi" />
-		<icon src="img/iconos/Android/iconos/72-72.png" gap:platform="android" gap:density="hdpi" />
-		<icon src="img/iconos/Android/iconos/96-96.png" gap:platform="android" gap:density="xhdpi" />
-		<icon src="img/iconos/Android/iconos/144-144.png" gap:platform="android" gap:density="xxhdpi" />
-		<icon src="img/iconos/Android/iconos/192-192.png" gap:platform="android" gap:density="xxxhdpi" />
-		<icon src="img/iconos/windows/iconos/62-62.png" gap:platform="winphone" />
-		<icon src="img/iconos/windows/iconos/173-173.png" gap:platform="winphone" gap:role="background" />
-		<icon src="img/iconos/default/iconos/64-64.png" />
-		<gap:splash src="img/iconos/ios/holder/320-480.png" gap:platform="ios" width="320" height="480" />
-		<gap:splash src="img/iconos/ios/holder/480-320.png" gap:platform="ios" width="480" height="320" />
-		<gap:splash src="img/iconos/ios/holder/640-960.png" gap:platform="ios" width="640" height="960" />
-		<gap:splash src="img/iconos/ios/holder/960-640.png" gap:platform="ios" width="960" height="640" />
-		<gap:splash src="img/iconos/ios/holder/640-1136.png" gap:platform="ios" width="640" height="1136" />
-		<gap:splash src="img/iconos/ios/holder/1136-640.png" gap:platform="ios" width="1136" height="640" />
 		<gap:splash src="img/iconos/Android/holder/240-400.png" gap:platform="android" gap:density="ldpi" />
 		<gap:splash src="img/iconos/Android/holder/320-480.png" gap:platform="android" gap:density="mdpi" />
 		<gap:splash src="img/iconos/Android/holder/480-800.png" gap:platform="android" gap:density="hdpi" />
