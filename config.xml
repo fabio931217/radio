@@ -90,6 +90,7 @@ sigtics
 		<gap:splash src="img/iconos/Android/holder/1080-1920.png" gap:platform="android" gap:density="xxhdpi" />
 		<access origin="*" />
 		<access origin="http://adminenri.sigtics.org/" subdomains="true" />
+		<allow-intent href="http://adminenri.sigtics.org/*" />
 			<allow-intent href="http://*/*" />
 			<allow-intent href="https://*/*" />
 			<allow-intent href="tel:*" />
