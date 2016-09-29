@@ -11,7 +11,7 @@ Enri, Aplicacion oficial de mario en tu radio		</description>
 sigtics
 		</author>
 
-		<preference name="phonegap-version" value="cli-6.3.0" />
+		<preference name="phonegap-version" value="3.7.0" />
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="false" />
 		<preference name="target-device" value="universal" />
