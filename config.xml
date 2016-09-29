@@ -57,7 +57,9 @@ sigtics
 		<gap:plugin name="org.apache.cordova.inappbrowser"  />
 		<gap:plugin name="org.apache.cordova.media"  />
 		<gap:plugin name="org.apache.cordova.media-capture"  />
-		<gap:plugin name="org.apache.cordova.network-information"  />
+		<!--<gap:plugin name="org.apache.cordova.network-information"  />-->
+		<gap:plugin name="com.butterflyeffect.plugins" spec="0.1.1" source="pgb" />
+
 		
 		<gap:plugin name="org.apache.cordova.splashscreen"  />
 		<gap:plugin name="org.apache.cordova.vibration"  />
