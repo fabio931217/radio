@@ -11,7 +11,7 @@ Enri, Aplicacion oficial de mario en tu radio		</description>
 sigtics
 		</author>
 
-		<preference name="phonegap-version" value="cli-6.3.0" />
+		<preference name="phonegap-version" value="3.7.0" />
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="false" />
 		<preference name="target-device" value="universal" />
@@ -47,18 +47,16 @@ sigtics
 		<feature name="http://api.phonegap.com/1.0/media"/>
 		<feature name="http://api.phonegap.com/1.0/notification"/>
 		<feature name="http://api.phonegap.com/1.0/network" />
+
 		<gap:plugin name="org.apache.cordova.camera"  />
 		<gap:plugin name="org.apache.cordova.contacts"  />
 		<gap:plugin name="org.apache.cordova.device-orientation"  />
 		<gap:plugin name="org.apache.cordova.dialogs"  />
 
-		<gap:plugin name="org.apache.cordova.geolocation"  />
-		<gap:plugin name="org.apache.cordova.globalization"  />
-		<gap:plugin name="org.apache.cordova.inappbrowser"  />
 		<gap:plugin name="org.apache.cordova.media"  />
 		<gap:plugin name="org.apache.cordova.media-capture"  />
 		<!--<gap:plugin name="org.apache.cordova.network-information"  />-->
-		<gap:plugin name="com.butterflyeffect.plugins" spec="0.1.1" source="pgb" />
+		<!--<gap:plugin name="com.butterflyeffect.plugins" spec="0.1.1" source="pgb" />-->
 
 		
 		<gap:plugin name="org.apache.cordova.splashscreen"  />
