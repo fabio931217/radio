@@ -46,7 +46,7 @@ sigtics
 		<feature name="http://api.phonegap.com/1.0/file"/>
 		<feature name="http://api.phonegap.com/1.0/media"/>
 		<feature name="http://api.phonegap.com/1.0/notification"/>
-		<feature name="http://api.phonegap.com/1.0/network"/>
+		<feature name="http://api.phonegap.com/1.0/network" />
 		<gap:plugin name="org.apache.cordova.camera"  />
 		<gap:plugin name="org.apache.cordova.contacts"  />
 		<gap:plugin name="org.apache.cordova.device-orientation"  />
@@ -57,8 +57,8 @@ sigtics
 		<gap:plugin name="org.apache.cordova.inappbrowser"  />
 		<gap:plugin name="org.apache.cordova.media"  />
 		<gap:plugin name="org.apache.cordova.media-capture"  />
-		<!--<gap:plugin name="org.apache.cordova.network-information"  />-->
-		<plugin name="com.butterflyeffect.plugins" spec="0.1.1" source="pgb" />
+		<gap:plugin name="org.apache.cordova.network-information"  />
+		
 		<gap:plugin name="org.apache.cordova.splashscreen"  />
 		<gap:plugin name="org.apache.cordova.vibration"  />
 
@@ -89,15 +89,5 @@ sigtics
 		<gap:splash src="img/iconos/Android/holder/480-800.png" gap:platform="android" gap:density="hdpi" />
 		<gap:splash src="img/iconos/Android/holder/720-960.png" gap:platform="android" gap:density="xhdpi" />
 		<gap:splash src="img/iconos/Android/holder/1080-1920.png" gap:platform="android" gap:density="xxhdpi" />
-		<access origin="*" />
-		<access origin="http://adminenri.sigtics.org/" subdomains="true" />
-		<allow-intent href="http://adminenri.sigtics.org/*" />
-			<allow-intent href="http://*/*" />
-			<allow-intent href="https://*/*" />
-			<allow-intent href="tel:*" />
-			<allow-intent href="sms:*" />
-			<allow-intent href="mailto:*" />
-			<allow-intent href="geo:*" />
-			<allow-intent href="tel:*" />
-			<allow-intent href="mailto:*" />
+		<access origin="*" onlyInBrowser="true" />	
 	</widget>
