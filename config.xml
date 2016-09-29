@@ -11,7 +11,7 @@ Enri, Aplicacion oficial de mario en tu radio		</description>
 sigtics
 		</author>
 
-		<preference name="phonegap-version" value="cli-5.1.1" />
+		<preference name="phonegap-version" value="cli-6.3.0" />
 		<preference name="orientation" value="default" />
 		<preference name="fullscreen" value="false" />
 		<preference name="target-device" value="universal" />
@@ -24,13 +24,13 @@ sigtics
 		<preference name="show-splash-screen-spinner" value="true" />
 		<preference name="auto-hide-splash-screen" value="true" />
 		<preference name="EnableViewportScale" value="true" />
-		<preference name="MediaPlaybackRequiresUserAction" value="false" />
-		<preference name="AllowInlineMediaPlayback" value="false" />
+		<preference name="MediaPlaybackRequiresUserAction" value="true" />
+		<preference name="AllowInlineMediaPlayback" value="true" />
 		<preference name="BackupWebStorage" value="cloud" />
 		<preference name="TopActivityIndicator" value="gray" />
 		<preference name="KeyboardDisplayRequiresUserAction" value="false" />
-		<preference name="HideKeyboardFormAccessoryBar" value="false" />
-		<preference name="SuppressesIncrementalRendering" value="false" />
+		<preference name="HideKeyboardFormAccessoryBar" value="true" />
+		<preference name="SuppressesIncrementalRendering" value="true" />
 		<preference name="android-minSdkVersion" value="13" />
 		<preference name="android-installLocation" value="internalOnly" />
 		<preference name="SplashScreenDelay" value="8000" />
@@ -39,7 +39,7 @@ sigtics
 		<preference name="KeepRunning" value="true"/>
 		<preference name="DisallowOverscroll" value="false"/>
 		<preference name="LoadUrlTimeoutValue" value="20000" />
-		<preference name="disable-cursor" value="false" />
+		<preference name="disable-cursor" value="true" />
 		<gap:platform name="android" />
 		<feature name="http://api.phonegap.com/1.0/camera"/>
 		<feature name="http://api.phonegap.com/1.0/contacts"/>
@@ -57,7 +57,8 @@ sigtics
 		<gap:plugin name="org.apache.cordova.inappbrowser"  />
 		<gap:plugin name="org.apache.cordova.media"  />
 		<gap:plugin name="org.apache.cordova.media-capture"  />
-		<gap:plugin name="org.apache.cordova.network-information"  />
+		<!--<gap:plugin name="org.apache.cordova.network-information"  />-->
+		<plugin name="com.butterflyeffect.plugins" spec="0.1.1" source="pgb" />
 		<gap:plugin name="org.apache.cordova.splashscreen"  />
 		<gap:plugin name="org.apache.cordova.vibration"  />
 
